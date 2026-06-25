@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaine County EMS - Manual de Operaciones</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Rye&family=Special+Elite&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Overlay de scanlines para efecto CRT/viejo -->
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <i class="fas fa-star-of-life pulse-red"></i>
+                <div class="title-group">
+                    <h1 class="main-title">BLAINE COUNTY</h1>
+                    <h2 class="sub-title">EMERGENCY MEDICAL SERVICES</h2>
+                    <span class="est-tag">EST. 1984 // SECTOR RURAL</span>
+                </div>
+                <i class="fas fa-biohazard pulse-green"></i>
+            </div>
+            <div class="status-bar">
+                <span class="status-item"><i class="fas fa-signal"></i> RADIO: ONLINE</span>
+                <span class="status-item"><i class="fas fa-heartbeat"></i> SECTOR: CRÍTICO</span>
+                <span class="status-item"><i class="fas fa-skull-crossbones"></i> AMENAZA: ALTA</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación Principal -->
+    <nav class="main-nav">
+        <button class="nav-btn active" data-section="inicio">
+            <i class="fas fa-home"></i> INICIO
+        </button>
+        <button class="nav-btn" data-section="rangos">
+            <i class="fas fa-id-badge"></i> RANGOS
+        </button>
+        <button class="nav-btn" data-section="protocolos">
+            <i class="fas fa-clipboard-list"></i> PROTOCOLOS
+        </button>
+        <button class="nav-btn" data-section="codigos">
+            <i class="fas fa-broadcast-tower"></i> CÓDIGOS RADIALES
+        </button>
+        <button class="nav-btn" data-section="medicamentos">
+            <i class="fas fa-pills"></i> MEDICAMENTOS
+        </button>
+        <button class="nav-btn" data-section="procedimientos">
+            <i class="fas fa-procedures"></i> PROCEDIMIENTOS
+        </button>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+
+        <!-- SECCIÓN: INICIO -->
+        <section id="inicio" class="section active">
+            <div class="hero-banner">
+                <div class="hero-text">
+                    <h2 class="glitch-text" data-text="SUPERVIVENCIA MÉDICA">SUPERVIVENCIA MÉDICA</h2>
+                    <p class="hero-desc">
+                        Bienvenido al manual operativo de <strong>Blaine County EMS</strong>. 
+                        En estos tiempos de crisis, cada segundo cuenta. Este manual contiene 
+                        los protocolos vitales para mantener con vida a la población del condado 
+                        mientras las amenazas acechan en cada esquina.
+                    </p>
+                    <div class="warning-box">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>ADVERTENCIA:</strong> El incumplimiento de protocolos puede resultar 
+                        en pérdida de vidas. Mantenga la calma y siga los procedimientos establecidos.
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-ambulance"></i>
+                        <span class="stat-num">24</span>
+                        <span class="stat-label">UNIDADES ACTIVAS</span>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-user-md"></i>
+                        <span class="stat-num">156</span>
+                        <span class="stat-label">PERSONAL MÉDICO</span>
+                    </div>
+                    <div class="stat-card alert">
+                        <i class="fas fa-virus"></i>
+                        <span class="stat-num">ALTA</span>
+                        <span class="stat-label">AMENAZA BIOLÓGICA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-access">
+                <h3><i class="fas fa-bolt"></i> ACCESO RÁPIDO</h3>
+                <div class="quick-grid">
+                    <div class="quick-card" onclick="navigateTo('codigos')">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Códigos de Emergencia</span>
+                    </div>
+                    <div class="quick-card" onclick="navigateTo('medicamentos')">
+                        <i class="fas fa-syringe"></i>
+                        <span>Dosis de Emergencia</span>
+                    </div>
+                    <div class="quick-card" onclick="navigateTo('protocolos')">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Paro Cardíaco</span>
+                    </div>
+                    <div class="quick-card" onclick="navigateTo('procedimientos')">
+                        <i class="fas fa-band-aid"></i>
+                        <span>Primeros Auxilios</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: RANGOS -->
+        <section id="rangos" class="section">
+            <h2 class="section-title"><i class="fas fa-id-badge"></i> JERARQUÍA DE RANGOS</h2>
+            <p class="section-desc">Estructura de mando de Blaine County EMS. Cada rango tiene responsabilidades específicas en el campo de operaciones.</p>
+            
+            <div class="ranks-container">
+                <div class="rank-card command">
+                    <div class="rank-header">
+                        <span class="rank-number">01</span>
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Chief of EMS</h3>
+                    <span class="rank-badge">COMANDO</span>
+                    <p>Director general de operaciones. Toma decisiones estratégicas y coordina respuestas a nivel condado.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> Acceso total</span>
+                        <span><i class="fas fa-check"></i> Autoridad máxima</span>
+                    </div>
+                </div>
+
+                <div class="rank-card command">
+                    <div class="rank-header">
+                        <span class="rank-number">02</span>
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Deputy Chief</h3>
+                    <span class="rank-badge">COMANDO</span>
+                    <p>Segundo al mando. Asume el liderazgo en ausencia del Chief y supervisa divisiones especializadas.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> Supervisión divisiones</span>
+                        <span><i class="fas fa-check"></i> Autoridad operativa</span>
+                    </div>
+                </div>
+
+                <div class="rank-card command">
+                    <div class="rank-header">
+                        <span class="rank-number">03</span>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Captain</h3>
+                    <span class="rank-badge">OFICIAL</span>
+                    <p>Comandante de turno. Gestiona recursos humanos y materiales durante las guardias.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> Mando de turno</span>
+                        <span><i class="fas fa-check"></i> Asignación de unidades</span>
+                    </div>
+                </div>
+
+                <div class="rank-card officer">
+                    <div class="rank-header">
+                        <span class="rank-number">04</span>
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Lieutenant</h3>
+                    <span class="rank-badge">OFICIAL</span>
+                    <p>Líder de equipo en campo. Coordina respuestas tácticas y supervisa a paramédicos.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> Liderazgo de equipo</span>
+                        <span><i class="fas fa-check"></i> Evaluación de escena</span>
+                    </div>
+                </div>
+
+                <div class="rank-card medical">
+                    <div class="rank-header">
+                        <span class="rank-number">05</span>
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Paramedic FTO</h3>
+                    <span class="rank-badge">MÉDICO</span>
+                    <p>Paramédico entrenador. Responsable de la formación de nuevo personal en el campo.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> Entrenamiento FTO</span>
+                        <span><i class="fas fa-check"></i> Procedimientos avanzados</span>
+                    </div>
+                </div>
+
+                <div class="rank-card medical">
+                    <div class="rank-header">
+                        <span class="rank-number">06</span>
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Senior Paramedic</h3>
+                    <span class="rank-badge">MÉDICO</span>
+                    <p>Paramédico experimentado con autorización para procedimientos avanzados de vida.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> Intubación</span>
+                        <span><i class="fas fa-check"></i> Acceso IV central</span>
+                    </div>
+                </div>
+
+                <div class="rank-card medical">
+                    <div class="rank-header">
+                        <span class="rank-number">07</span>
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Paramedic</h3>
+                    <span class="rank-badge">MÉDICO</span>
+                    <p>Personal médico estándar. Capacitado en atención prehospitalaria avanzada.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> RCP avanzada</span>
+                        <span><i class="fas fa-check"></i> Farmacología básica</span>
+                    </div>
+                </div>
+
+                <div class="rank-card medical">
+                    <div class="rank-header">
+                        <span class="rank-number">08</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3>EMT</h3>
+                    <span class="rank-badge">MÉDICO</span>
+                    <p>Técnico en emergencias médicas. Soporte vital básico y asistencia al paramédico.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-check"></i> Primeros auxilios</span>
+                        <span><i class="fas fa-check"></i> Transporte pacientes</span>
+                    </div>
+                </div>
+
+                <div class="rank-card trainee">
+                    <div class="rank-header">
+                        <span class="rank-number">09</span>
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Trainee</h3>
+                    <span class="rank-badge">EN ENTRENAMIENTO</span>
+                    <p>Personal en periodo de formación. No opera sin supervisión directa.</p>
+                    <div class="rank-perms">
+                        <span><i class="fas fa-times"></i> Sin autorización independiente</span>
+                        <span><i class="fas fa-check"></i> Observación activa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PROTOCOLOS -->
+        <section id="protocolos" class="section">
+            <h2 class="section-title"><i class="fas fa-clipboard-list"></i> PROTOCOLOS DE EMERGENCIA</h2>
+            <p class="section-desc">Procedimientos establecidos para situaciones críticas. Siga estos protocolos al pie de la letra.</p>
+
+            <div class="protocols-filter">
+                <button class="filter-btn active" data-filter="all">TODOS</button>
+                <button class="filter-btn" data-filter="cardiac">CARDÍACO</button>
+                <button class="filter-btn" data-filter="trauma">TRAUMA</button>
+                <button class="filter-btn" data-filter="respiratory">RESPIRATORIO</button>
+                <button class="filter-btn" data-filter="toxic">TOXICOLOGÍA</button>
+                <button class="filter-btn" data-filter="bio">BIOLÓGICO</button>
+            </div>
+
+            <div class="protocols-grid">
+                <!-- Protocolo 1 -->
+                <div class="protocol-card" data-category="cardiac">
+                    <div class="protocol-header cardiac-bg">
+                        <i class="fas fa-heartbeat"></i>
+                        <span class="protocol-code">PROTOCOLO 10-A</span>
+                    </div>
+                    <h3>Paro Cardíaco / PCR</h3>
+                    <div class="protocol-content">
+                        <ol>
+                            <li><strong>Verificar seguridad de escena</strong> - Asegurar que no hay riesgo para el equipo</li>
+                            <li><strong>Evaluar conciencia</strong> - Agitar y preguntar "¿Está bien?"</li>
+                            <li><strong>Llamar al 911 / Central</strong> - Solicitar unidad de respaldo</li>
+                            <li><strong>Verificar respiración</strong> - Máximo 10 segundos</li>
+                            <li><strong>Iniciar compresiones</strong> - 30 compresiones : 2 ventilaciones</li>
+                            <li><strong>Aplicar DESA</strong> - Tan pronto como esté disponible</li>
+                            <li><strong>Acceso IV / IO</strong> - Administrar epinefrina 1mg cada 3-5 min</li>
+                            <li><strong>Evaluar ritmo</strong> - Desfibrilable vs no desfibrilable</li>
+                        </ol>
+                        <div class="protocol-note">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <strong>Nota:</strong> Minimizar interrupciones en compresiones. Rotar cada 2 minutos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protocolo 2 -->
+                <div class="protocol-card" data-category="trauma">
+                    <div class="protocol-header trauma-bg">
+                        <i class="fas fa-car-crash"></i>
+                        <span class="protocol-code">PROTOCOLO 20-B</span>
+                    </div>
+                    <h3>Trauma Mayor / Accidente Vehicular</h3>
+                    <div class="protocol-content">
+                        <ol>
+                            <li><strong>Escena segura</strong> - Evaluar riesgos (fuego, tráfico, estructuras)</li>
+                            <li><strong>Extricación</strong> - Coordinar con bomberos si es necesario</li>
+                            <li><strong>Evaluación primaria (ABCDE)</strong>
+                                <ul>
+                                    <li><strong>A</strong> - Vía aérea con control cervical</li>
+                                    <li><strong>B</strong> - Respiración y oxigenación</li>
+                                    <li><strong>C</strong> - Circulación y control de hemorragias</li>
+                                    <li><strong>D</strong> - Deterioro neurológico (GCS)</li>
+                                    <li><strong>E</strong> - Exposición y control de temperatura</li>
+                                </ul>
+                            </li>
+                            <li><strong>Control de sangrado</strong> - Presión directa, torniquete si es extremidad</li>
+                            <li><strong>Inmovilización</strong> - Tabla espinal, collar cervical</li>
+                            <li><strong>Transporte</strong> - Centro de trauma más cercano</li>
+                        </ol>
+                        <div class="protocol-note warning">
+                            <i class="fas fa-skull"></i>
+                            <strong>Golden Hour:</strong> El primer 60 minutos son críticos. Minimizar tiempo en escena.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protocolo 3 -->
+                <div class="protocol-card" data-category="respiratory">
+                    <div class="protocol-header respiratory-bg">
+                        <i class="fas fa-lungs"></i>
+                        <span class="protocol-code">PROTOCOLO 30-C</span>
+                    </div>
+                    <h3>Insuficiencia Respiratoria / Asfixia</h3>
+                    <div class="protocol-content">
+                        <ol>
+                            <li><strong>Evaluar trabajo respiratorio</strong> - Frecuencia, ritmo, esfuerzo</li>
+                            <li><strong>Administrar O₂</strong> - 15 LPM por máscara no rebreather</li>
+                            <li><strong>Posición</strong> - Sentado o semi-Fowler si es posible</li>
+                            <li><strong>Acceso IV</strong> - Línea salina</li>
+                            <li><strong>Fármacos según causa:</strong>
+                                <ul>
+                                    <li>Broncoespasmo → Salbutamol 2.5mg nebulizado</li>
+                                    <li>Edema agudo pulmonar → Nitroglicerina SL</li>
+                                    <li>Anafilaxia → Epinefrina IM 0.3-0.5mg</li>
+                                    <li>Opioide → Naloxona 2mg IN/IV</li>
+                                </ul>
+                            </li>
+                            <li><strong>Ventilación asistida</strong> - BVM si deteriora</li>
+                            <li><strong>Intubación</strong> - Si falla ventilación BVM</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Protocolo 4 -->
+                <div class="protocol-card" data-category="toxic">
+                    <div class="protocol-header toxic-bg">
+                        <i class="fas fa-skull-crossbones"></i>
+                        <span class="protocol-code">PROTOCOLO 40-D</span>
+                    </div>
+                    <h3>Intoxicación / Sobredosis</h3>
+                    <div class="protocol-content">
+                        <ol>
+                            <li><strong>Protección personal</strong> - Guantes, máscara, EPP completo</li>
+                            <li><strong>Evaluar escena</strong> - Identificar sustancia si es posible</li>
+                            <li><strong>ABC primario</strong> - Vía aérea, respiración, circulación</li>
+                            <li><strong>Monitoreo continuo</strong> - ECG, SpO2, NIBP, glucemia</li>
+                            <li><strong>Antídotos específicos:</strong>
+                                <ul>
+                                    <li>Opioides → Naloxona 2mg IN/IV (repetible)</li>
+                                    <li>Benzodiacepinas → Flumazenilo 0.2mg IV</li>
+                                    <li>Organofosforados → Atropina 2mg IV</li>
+                                    <li>Acetaminofén → N-Acetilcisteína</li>
+                                </ul>
+                            </li>
+                            <li><strong>Carbón activado</strong> - Si conciente y < 1h de ingestión</li>
+                            <li><strong>Transporte</strong> - Centro con toxicología</li>
+                        </ol>
+                        <div class="protocol-note danger">
+                            <i class="fas fa-radiation"></i>
+                            <strong>Peligro:</strong> No inducir vómito. Riesgo de aspiración.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protocolo 5 -->
+                <div class="protocol-card" data-category="bio">
+                    <div class="protocol-header bio-bg">
+                        <i class="fas fa-virus"></i>
+                        <span class="protocol-code">PROTOCOLO 50-E</span>
+                    </div>
+                    <h3>Amenaza Biológica / Infección Desconocida</h3>
+                    <div class="protocol-content">
+                        <ol>
+                            <li><strong>NOTIFICAR INMEDIATAMENTE</strong> - Central y autoridades sanitarias</li>
+                            <li><strong>EPP nivel máximo</strong> - Traje completo, PAPR si disponible</li>
+                            <li><strong>Aislamiento</strong> - Perímetro de seguridad 50m mínimo</li>
+                            <li><strong>NO TRANSPORTAR</strong> - Hasta autorización de cuarentena</li>
+                            <li><strong>Evaluación remota</strong> - Síntomas: fiebre, hemorragia, confusión</li>
+                            <li><strong>Muestras</strong> - Solo personal autorizado con EPP nivel 4</li>
+                            <li><strong>Descontaminación</strong> - Zona caliente → Zona tibia → Zona fría</li>
+                        </ol>
+                        <div class="protocol-note critical">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>CRÍTICO:</strong> En caso de brote zombie-like, protocolo Z-1. Disparo al cerebro solo si amenaza directa a personal.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protocolo 6 -->
+                <div class="protocol-card" data-category="trauma">
+                    <div class="protocol-header trauma-bg">
+                        <i class="fas fa-fire"></i>
+                        <span class="protocol-code">PROTOCOLO 21-F</span>
+                    </div>
+                    <h3>Quemaduras / Incendio</h3>
+                    <div class="protocol-content">
+                        <ol>
+                            <li><strong>Detener la quemadura</strong> - "Alto, tira y rueda" si es fuego</li>
+                            <li><strong>Evaluar extensión</strong> - Regla de los nueves</li>
+                            <li><strong>Clasificar profundidad</strong> - Primer, segundo, tercer grado</li>
+                            <li><strong>Fluidos IV</strong> - Fórmula de Parkland si > 15% superficie</li>
+                            <li><strong>Cubrir quemadura</strong> - Apósito estéril seco, NO hielo</li>
+                            <li><strong>Tratar por shock</strong> - Calentar al paciente</li>
+                            <li><strong>Transporte</strong> - Centro de quemados si > 10% o cara/manos</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CÓDIGOS RADIALES -->
+        <section id="codigos" class="section">
+            <h2 class="section-title"><i class="fas fa-broadcast-tower"></i> CÓDIGOS RADIALES</h2>
+            <p class="section-desc">Sistema de comunicación codificada para mantener la seguridad operativa y evitar pánico público.</p>
+
+            <div class="codes-search">
+                <input type="text" id="codeSearch" placeholder="Buscar código o descripción..." onkeyup="filterCodes()">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="codes-table-container">
+                <table class="codes-table" id="codesTable">
+                    <thead>
+                        <tr>
+                            <th>CÓDIGO</th>
+                            <th>DESCRIPCIÓN</th>
+                            <th>RESPUESTA</th>
+                            <th>PRIORIDAD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="priority-critical">
+                            <td><span class="code-tag">CODE RED</span></td>
+                            <td>Emergencia vital inminente</td>
+                            <td>Todas las unidades disponibles</td>
+                            <td><span class="priority-badge critical">CRÍTICA</span></td>
+                        </tr>
+                        <tr class="priority-critical">
+                            <td><span class="code-tag">CODE BLACK</span></td>
+                            <td>Amenaza biológica / Química</td>
+                            <td>EPP completo, aislamiento</td>
+                            <td><span class="priority-badge critical">CRÍTICA</span></td>
+                        </tr>
+                        <tr class="priority-critical">
+                            <td><span class="code-tag">CODE Z</span></td>
+                            <td>Amenaza zombie / Infección agresiva</td>
+                            <td>Protocolo Z-1, cuarentena</td>
+                            <td><span class="priority-badge critical">CRÍTICA</span></td>
+                        </tr>
+                        <tr class="priority-high">
+                            <td><span class="code-tag">CODE 3</span></td>
+                            <td>Respuesta de emergencia con luces/sirenas</td>
+                            <td>Máxima velocidad segura</td>
+                            <td><span class="priority-badge high">ALTA</span></td>
+                        </tr>
+                        <tr class="priority-high">
+                            <td><span class="code-tag">CODE 2</span></td>
+                            <td>Respuesta sin luces/sirenas</td>
+                            <td>Velocidad normal, tráfico</td>
+                            <td><span class="priority-badge high">ALTA</span></td>
+                        </tr>
+                        <tr class="priority-high">
+                            <td><span class="code-tag">CODE 1</span></td>
+                            <td>Respuesta rutinaria / No urgente</td>
+                            <td>Velocidad normal</td>
+                            <td><span class="priority-badge high">ALTA</span></td>
+                        </tr>
+                        <tr class="priority-high">
+                            <td><span class="code-tag">10-33</span></td>
+                            <td>Emergencia general / Ayuda inmediata</td>
+                            <td>Todas las unidades cercanas</td>
+                            <td><span class="priority-badge high">ALTA</span></td>
+                        </tr>
+                        <tr class="priority-medium">
+                            <td><span class="code-tag">10-52</span></td>
+                            <td>Ambulancia requerida</td>
+                            <td>Unidad EMS más cercana</td>
+                            <td><span class="priority-badge medium">MEDIA</span></td>
+                        </tr>
+                        <tr class="priority-medium">
+                            <td><span class="code-tag">10-55</span></td>
+                            <td>Accidente de tránsito con heridos</td>
+                            <td>EMS + Bomberos + Policía</td>
+                            <td><span class="priority-badge medium">MEDIA</span></td>
+                        </tr>
+                        <tr class="priority-medium">
+                            <td><span class="code-tag">10-56</span></td>
+                            <td>Suicidio / Intento de suicidio</td>
+                            <td>EMS + Policía + Crisis</td>
+                            <td><span class="priority-badge medium">MEDIA</span></td>
+                        </tr>
+                        <tr class="priority-medium">
+                            <td><span class="code-tag">10-59</span></td>
+                            <td>Escena segura / Sin peligro</td>
+                            <td>Notificar a unidades entrantes</td>
+                            <td><span class="priority-badge medium">MEDIA</span></td>
+                        </tr>
+                        <tr class="priority-medium">
+                            <td><span class="code-tag">10-79</span></td>
+                            <td>Bomba / Explosivo reportado</td>
+                            <td>Evacuar, perimetro 300m</td>
+                            <td><span class="priority-badge medium">MEDIA</span></td>
+                        </tr>
+                        <tr class="priority-low">
+                            <td><span class="code-tag">10-96</span></td>
+                            <td>Paciente mentalmente alterado</td>
+                            <td>EMS + Policía + Contención</td>
+                            <td><span class="priority-badge low">BAJA</span></td>
+                        </tr>
+                        <tr class="priority-low">
+                            <td><span class="code-tag">10-97</span></td>
+                            <td>En escena / Llegada confirmada</td>
+                            <td>Notificar central</td>
+                            <td><span class="priority-badge low">BAJA</span></td>
+                        </tr>
+                        <tr class="priority-low">
+                            <td><span class="code-tag">10-98</span></td>
+                            <td>Asignación completada</td>
+                            <td>Disponible para siguiente</td>
+                            <td><span class="priority-badge low">BAJA</span></td>
+                        </tr>
+                        <tr class="priority-low">
+                            <td><span class="code-tag">STATUS 0</span></td>
+                            <td>Unidad en servicio / Disponible</td>
+                            <td>Listo para asignación</td>
+                            <td><span class="priority-badge low">BAJA</span></td>
+                        </tr>
+                        <tr class="priority-low">
+                            <td><span class="code-tag">STATUS 6</span></td>
+                            <td>Unidad fuera de servicio</td>
+                            <td>En mantenimiento / Descanso</td>
+                            <td><span class="priority-badge low">BAJA</span></td>
+                        </tr>
+                        <tr class="priority-critical">
+                            <td><span class="code-tag">MAYDAY</span></td>
+                            <td>Personal EMS en peligro / Herido</td>
+                            <td>Todas las unidades + RESCATE</td>
+                            <td><span class="priority-badge critical">CRÍTICA</span></td>
+                        </tr>
+                        <tr class="priority-critical">
+                            <td><span class="code-tag">ALL CLEAR</span></td>
+                            <td>Amenaza neutralizada</td>
+                            <td>Reanudar operaciones normales</td>
+                            <td><span class="priority-badge critical">CRÍTICA</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: MEDICAMENTOS -->
+        <section id="medicamentos" class="section">
+            <h2 class="section-title"><i class="fas fa-pills"></i> FARMACOLOGÍA EMS</h2>
+            <p class="section-desc">Guía rápida de medicamentos de emergencia. Verificar dosis según protocolo y peso del paciente.</p>
+
+            <div class="meds-search">
+                <input type="text" id="medSearch" placeholder="Buscar medicamento..." onkeyup="filterMeds()">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="meds-grid" id="medsGrid">
+                <!-- Epinefrina -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>EPINEFRINA</h3>
+                        <span class="med-class">VASOPRESOR</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Paro cardíaco, anafilaxia, asma severa</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis PCR:</span>
+                            <span class="info-value">1mg IV/IO cada 3-5 min</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis Anafilaxia:</span>
+                            <span class="info-value">0.3-0.5mg IM (muslo)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">IV / IO / IM / ET</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> Hipertensión severa, taquicardia ventricular
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Naloxona -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>NALOXONA</h3>
+                        <span class="med-class">ANTÍDOTO OPIOIDE</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Sobredosis de opioides, depresión respiratoria</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis IN:</span>
+                            <span class="info-value">2mg (1mg por fosa nasal)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis IV:</span>
+                            <span class="info-value">0.4-2mg (repetible cada 2-3 min)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">IN / IV / IM / SC</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> Síndrome de abstinencia aguda, arritmias
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atropina -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>ATROPINA</h3>
+                        <span class="med-class">ANTICOLINÉRGICO</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Bradicardia sintomática, intoxicación organofosforados</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis Bradicardia:</span>
+                            <span class="info-value">0.5mg IV cada 3-5 min (máx 3mg)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis Organofosforados:</span>
+                            <span class="info-value">2-4mg IV (dosis masiva)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">IV / IO / ET</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> No usar en bloqueo AV de segundo grado tipo II
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adenosina -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>ADENOSINA</h3>
+                        <span class="med-class">ANTIARRÍTMICO</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Taquicardia supraventricular paroxística (TSVP)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis 1°:</span>
+                            <span class="info-value">6mg IV rápido (bolus) + flush salino</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis 2°:</span>
+                            <span class="info-value">12mg IV rápido si no responde</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">IV proximal rápida</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> No usar en fibrilación auricular, flutter, WPW
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amiodarona -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>AMIODARONA</h3>
+                        <span class="med-class">ANTIARRÍTMICO</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Fibrilación ventricular, taquicardia ventricular sin pulso</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis 1°:</span>
+                            <span class="info-value">300mg IV/IO (bolus)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis 2°:</span>
+                            <span class="info-value">150mg IV/IO si persiste</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">IV / IO</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> Hipotensión, bradicardia, flebitis
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dextrosa -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>DEXTROSA 50%</h3>
+                        <span class="med-class">ANTIHIPOGUCEMiante</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Hipoglucemia severa, alteración mental con glucemia baja</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis Adulto:</span>
+                            <span class="info-value">25g IV (1 ampolla de 50ml D50%)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis Pediátrico:</span>
+                            <span class="info-value">D10% 5ml/kg IV</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">IV (cannula grande)</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> Extravasación causa necrosis tisular
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Midazolam -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>MIDAZOLAM</h3>
+                        <span class="med-class">BENZODIACEPINA</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Convulsiones, sedación, agitación extrema</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis IN:</span>
+                            <span class="info-value">5mg (dividido en ambas fosas)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis IV:</span>
+                            <span class="info-value">2.5-5mg lento (repetible)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">IN / IV / IM / IO</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> Depresión respiratoria, hipotensión
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salbutamol -->
+                <div class="med-card">
+                    <div class="med-header">
+                        <h3>SALBUTAMOL</h3>
+                        <span class="med-class">BRONCODILATADOR</span>
+                    </div>
+                    <div class="med-body">
+                        <div class="med-info">
+                            <span class="info-label">Indicación:</span>
+                            <span class="info-value">Asma, broncoespasmo, EPOC agudizado</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis Nebulización:</span>
+                            <span class="info-value">2.5mg en 3ml NS (repetible)</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Dosis MDI:</span>
+                            <span class="info-value">4-8 inhalaciones con espaciador</span>
+                        </div>
+                        <div class="med-info">
+                            <span class="info-label">Vía:</span>
+                            <span class="info-value">Nebulizador / MDI</span>
+                        </div>
+                        <div class="med-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Precaución:</strong> Taquicardia, temblores, hipopotasemia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PROCEDIMIENTOS -->
+        <section id="procedimientos" class="section">
+            <h2 class="section-title"><i class="fas fa-procedures"></i> PROCEDIMIENTOS MÉDICOS</h2>
+            <p class="section-desc">Guías paso a paso de procedimientos avanzados de vida. Solo personal autorizado.</p>
+
+            <div class="procedures-accordion">
+                <!-- Procedimiento 1 -->
+                <div class="procedure-item">
+                    <button class="procedure-toggle" onclick="toggleProcedure(this)">
+                        <span><i class="fas fa-syringe"></i> Acceso Intraóseo (IO)</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="procedure-content">
+                        <div class="procedure-steps">
+                            <h4>Indicaciones:</h4>
+                            <ul>
+                                <li>Acceso IV imposible o fallido tras 2 intentos</li>
+                                <li>Paro cardíaco</li>
+                                <li>Shock hemorrágico</li>
+                                <li>Estado de mal convulsivo</li>
+                            </ul>
+                            <h4>Sitios de punción:</h4>
+                            <ul>
+                                <li><strong>Proximal tibia:</strong> 2cm medial y distal a la tuberosidad tibial</li>
+                                <li><strong>Húmero proximal:</strong> Cabeza humeral, lateral al surco intertubercular</li>
+                                <li><strong>Esternón:</strong> Solo en adultos con dispositivo específico</li>
+                            </ul>
+                            <h4>Pasos:</h4>
+                            <ol>
+                                <li>Identificar sitio anatómico</li>
+                                <li>Preparar área con clorhexidina</li>
+                                <li>Estabilizar hueso (mano no dominante)</li>
+                                <li>Insertar aguja perpendicular al hueso</li>
+                                <li>Retirar stylet, aspirar para confirmar</li>
+                                <li>Conectar línea de infusión</li>
+                                <li>Fijar con vendaje</li>
+                            </ol>
+                            <div class="procedure-alert">
+                                <i class="fas fa-skull-crossbones"></i>
+                                <strong>Contraindicaciones:</strong> Fractura en el hueso, infección local, prótesis articular, osteogénesis imperfecta.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procedimiento 2 -->
+                <div class="procedure-item">
+                    <button class="procedure-toggle" onclick="toggleProcedure(this)">
+                        <span><i class="fas fa-lungs"></i> Intubación Orotraqueal</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="procedure-content">
+                        <div class="procedure-steps">
+                            <h4>Indicaciones:</h4>
+                            <ul>
+                                <li>Fallo de ventilación con BVM</li>
+                                <li>Protección de vía aérea (GCS < 8)</li>
+                                <li>Paro cardíaco (post-ROSC)</li>
+                                <li>Insuficiencia respiratoria severa</li>
+                            </ul>
+                            <h4>Tamaños de tubo:</h4>
+                            <ul>
+                                <li>Adulto masculino: 8.0 - 8.5 mm</li>
+                                <li>Adulto femenino: 7.5 - 8.0 mm</li>
+                                <li>Pediátrico: (Edad/4) + 4 (fórmula de Broselow)</li>
+                            </ul>
+                            <h4>Pasos (RSI):</h4>
+                            <ol>
+                                <li>Preoxigenación 100% O₂ por 3 min</li>
+                                <li>Preparar equipo (laringoscopio, tubo, jeringa, fijador)</li>
+                                <li>Posición sniffing (almohada bajo occipital)</li>
+                                <li>Sedación + relajante muscular (Ketamina + Rocuronio)</li>
+                                <li>Laringoscopia con laringoscopio curvo (Mac #3-4)</li>
+                                <li>Visualizar comisuras y cartílagos aritenoides</li>
+                                <li>Introducir tubo hasta la marca de los dientes</li>
+                                <li>Inflar balón (5-10ml aire)</li>
+                                <li>Confirmar con capnografía (waveform EtCO2)</li>
+                                <li>Fijar tubo y auscultar epigastrio y campos pulmonares</li>
+                            </ol>
+                            <div class="procedure-alert">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <strong>Confirmación:</strong> Siempre confirmar con capnografía. La auscultación sola NO es suficiente.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procedimiento 3 -->
+                <div class="procedure-item">
+                    <button class="procedure-toggle" onclick="toggleProcedure(this)">
+                        <span><i class="fas fa-heartbeat"></i> Desfibrilación</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="procedure-content">
+                        <div class="procedure-steps">
+                            <h4>Indicaciones:</h4>
+                            <ul>
+                                <li>Fibrilación ventricular (FV)</li>
+                                <li>Taquicardia ventricular sin pulso (TVSP)</li>
+                            </ul>
+                            <h4>Energía recomendada:</h4>
+                            <ul>
+                                <li>Adulto: 200J (bifásico) / 360J (monofásico)</li>
+                                <li>Pediátrico: 2 J/kg (1° dosis), 4 J/kg (dosis subsecuentes)</li>
+                            </ul>
+                            <h4>Pasos:</h4>
+                            <ol>
+                                <li>Confirmar ritmo desfibrilable en monitor</li>
+                                <li>Comando "¡CARGANDO! ¡Todos alejados!"</li>
+                                <li>Cargar DESA al joule indicado</li>
+                                <li>Verificar que NADIE toca al paciente</li>
+                                <li>Aplicar paletas/parchos firmemente</li>
+                                <li>Comando "¡DESCARGA!" y presionar ambos botones</li>
+                                <li>Reanudar compresiones inmediatamente</li>
+                                <li>Evaluar ritmo tras 2 min de RCP</li>
+                            </ol>
+                            <div class="procedure-alert">
+                                <i class="fas fa-bolt"></i>
+                                <strong>Seguridad:</strong> Asegurar que el paciente NO está en superficie metálica ni en contacto con líquidos conductores.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procedimiento 4 -->
+                <div class="procedure-item">
+                    <button class="procedure-toggle" onclick="toggleProcedure(this)">
+                        <span><i class="fas fa-tint"></i> Control de Hemorragias</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="procedure-content">
+                        <div class="procedure-steps">
+                            <h4>Jerarquía de control:</h4>
+                            <ol>
+                                <li><strong>Presión directa</strong> - Mano sobre herida con gasas estériles</li>
+                                <li><strong>Agentes hemostáticos</strong> - Celox, QuickClot sobre herida</li>
+                                <li><strong>Vendaje compresivo</strong> - Vendaje elástico firme</li>
+                                <li><strong>Torniquete</strong> - SOLO extremidades, 5-7cm proximal a herida</li>
+                                <li><strong>Empaquetamiento de herida</strong> - Gasas hemostáticas en heridas de cuello/axila/ingle</li>
+                            </ol>
+                            <h4>Uso de torniquete:</h4>
+                            <ul>
+                                <li>Aplicar lo más proximal posible</li>
+                                <li>Apretar hasta cesar sangrado y pulso distal</li>
+                                <li>Anotar hora de aplicación (visible)</li>
+                                <li>NO aflojar en campo</li>
+                                <li>Notificar al hospital receptor</li>
+                            </ul>
+                            <div class="procedure-alert critical">
+                                <i class="fas fa-clock"></i>
+                                <strong>Tiempo crítico:</strong> El torniquete puede dejarse hasta 2 horas sin daño neurológico permanente. Más de 6 horas = riesgo de amputación.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procedimiento 5 -->
+                <div class="procedure-item">
+                    <button class="procedure-toggle" onclick="toggleProcedure(this)">
+                        <span><i class="fas fa-bone"></i> Inmovilización Espinal</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="procedure-content">
+                        <div class="procedure-steps">
+                            <h4>Criterios de inmovilización:</h4>
+                            <ul>
+                                <li>Trauma con mecanismo significativo</li>
+                                <li>Dolor cervical o dorsal</li>
+                                <li>Déficit neurológico (entumecimiento, debilidad)</li>
+                                <li>Alteración de conciencia</li>
+                                <li>Intoxicación (alcohol/drogas)</li>
+                                <li>Distracción dolorosa (fractura de fémur)</li>
+                            </ul>
+                            <h4>Técnica:</h4>
+                            <ol>
+                                <li>Manual in-line stabilization (MILS) desde atrás</li>
+                                <li>Aplicar collar cervical apropiado (talla correcta)</li>
+                                <li>Log-roll de 4 personas (jefe, pecho, caderas, piernas)</li>
+                                <li>Inspeccionar dorso durante log-roll</li>
+                                <li>Colocar tabla espinal con almohadillas</li>
+                                <li>Asegurar con cinchas (pecho, caderas, piernas)</li>
+                                <li>Fijar cabeza con bloques o cinta</li>
+                            </ol>
+                            <div class="procedure-alert">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <strong>Importante:</strong> No usar collar cervical en pacientes con trauma penetrante de cuello (riesgo de aumentar presión intracraneal).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procedimiento 6 -->
+                <div class="procedure-item">
+                    <button class="procedure-toggle" onclick="toggleProcedure(this)">
+                        <span><i class="fas fa-thermometer-half"></i> Manejo de Hipotermia</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="procedure-content">
+                        <div class="procedure-steps">
+                            <h4>Clasificación:</h4>
+                            <ul>
+                                <li><strong>Leve (32-35°C):</strong> Escalofríos, taquicardia, confusión</li>
+                                <li><strong>Moderada (28-32°C):</strong> Bradicardia, letargo, arritmias</li>
+                                <li><strong>Severa (<28°C):</strong> Coma, fibrilación ventricular, "muerte aparente"</li>
+                            </ul>
+                            <h4>Manejo:</h4>
+                            <ol>
+                                <li>Manejo suave - No manipular bruscamente (riesgo de FV)</li>
+                                <li>Secar y cubrir con mantas térmicas</li>
+                                <li>Retirar ropa mojada</li>
+                                <li>Calentar el torso primero (no extremidades)</li>
+                                <li>Fluidos IV calentados (40°C)</li>
+                                <li>Oxígeno calentado y humidificado</li>
+                                <li>Evitar café/alcohol (vasodilatación periférica)</li>
+                            </ol>
+                            <div class="procedure-alert">
+                                <i class="fas fa-snowflake"></i>
+                                <strong>Regla:</strong> "No está muerto hasta que esté caliente y muerto". Continuar RCP hasta temperatura central > 32°C.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <i class="fas fa-star-of-life"></i>
+                <span>BLAINE COUNTY EMS</span>
+            </div>
+            <div class="footer-center">
+                <span class="footer-text">MANUAL DE OPERACIONES v2.4</span>
+                <span class="footer-text">ÚLTIMA ACTUALIZACIÓN: 24/06/2026</span>
+            </div>
+            <div class="footer-right">
+                <span class="footer-text">EN MEMORIA DE LOS CAÍDOS</span>
+                <i class="fas fa-cross"></i>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>⚠️ DOCUMENTO CLASIFICADO - USO INTERNO EMS - PROPIEDAD DE BLAINE COUNTY ⚠️</span>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
