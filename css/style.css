@@ -398,4 +398,110 @@ body {
     background: var(--bg-card);
     border: 2px solid var(--border-color);
     padding: 20px;
-    text-align
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    border-color: var(--accent-red);
+    transform: translateY(-3px);
+}
+
+.stat-card i {
+    font-size: 2rem;
+    color: var(--accent-amber);
+    margin-bottom: 10px;
+}
+
+.stat-card.alert i {
+    color: var(--accent-red);
+    animation: pulse-red 1s infinite;
+}
+
+.stat-num {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+.stat-card.alert .stat-num {
+    color: var(--accent-red);
+}
+
+.stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+}
+
+/* Quick Access */
+.quick-access {
+    margin-top: 40px;
+}
+
+.quick-access h3 {
+    font-family: var(--font-title);
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quick-access h3 i {
+    color: var(--accent-amber);
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.quick-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quick-card:hover {
+    border-color: var(--accent-red);
+    background: rgba(139, 0, 0, 0.1);
+    transform: translateX(5px);
+}
+
+.quick-card i {
+    font-size: 1.8rem;
+    color: var(--accent-red);
+}
+
+.quick-card span {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   RANGOS
+   ============================================ */
+.ranks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.rank-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    padding: 25px;
+    position: relative;
+    transition: all 0.3s;
+   
